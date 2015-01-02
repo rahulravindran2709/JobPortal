@@ -1,0 +1,160 @@
+body {
+	background-color:#555;
+	padding: 60px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+.white
+{
+	color:white;
+}
+.searchformbg
+{
+	background-color: #599ad1;
+}
+.voffset50
+{
+	margin-top:50px;
+}
+.voffset30
+{
+	margin-top:30px;
+}
+.vnegativeoffset10
+{
+	margin-top:-10px;
+}
+.lnegativeoffset60
+{
+	margin-left:-60px;
+}
+.rnegativeoffset60
+{
+	margin-right:-60px;
+}
+.padding20
+{
+	padding:20px;
+}
+.paddingleft10
+{
+	padding-left: 10px;
+}
+.paddingtop10
+{
+	padding-top: 10px;
+}
+.paddingleft20
+{
+	padding-left: 20px;
+}
+.borderright
+{
+	border-right: 1px solid black;
+}
+.borderleft
+{
+	border-left: 1px solid grey;
+}
+.borderbottom
+{
+	border-bottom: 1px solid grey;
+}
+.minheightDiv
+{
+	min-height: 1px;
+}
+.maincontent
+{
+	border:0.5px solid black !important;
+	background-color:white;
+}
+a {
+	color: #00B7FF;
+}
+
+#loginForm .modal-dialog  
+{width:24%;
+
+
+}
+#signUpForm .modal-dialog  
+{width:20%;
+
+
+}
+
+/*.repeat-item.ng-enter,
+.repeat-item.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.repeat-item.ng-enter,
+.repeat-item.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.repeat-item.ng-leave,
+.repeat-item.ng-enter.ng-enter-active {
+  opacity:1;
+}*/
+/*
+ We're using CSS transitions for when
+ the enter and move events are triggered
+ for the element that has the .repeated-item
+ class
+*/
+.repeat-item.ng-enter, .repeat-item.ng-move {
+ -webkit-transition:0.5s linear all;
+ -moz-transition:0.5s linear all;
+ -o-transition:0.5s linear all;
+ transition:0.5s linear all;
+ opacity:0;
+}
+
+/*
+The ng-enter-active and ng-move-active
+are where the transition destination properties
+are set so that the animation knows what to
+animate.
+*/
+.repeat-item.ng-enter.ng-enter-active,
+.repeat-item.ng-move.ng-move-active {
+ opacity:1;
+}
+
+/*
+ We're using CSS keyframe animations for when
+ the leave event is triggered for the element
+ that has the .repeated-item class
+*/
+.repeat-item.ng-leave {
+ -webkit-animation:0.5s my_animation;
+ -moz-animation:0.5s my_animation;
+ -o-animation:0.5s my_animation;
+ animation:0.5s my_animation;
+}
+
+@keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+/*
+ Unfortunately each browser vendor requires
+ its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-moz-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-o-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}

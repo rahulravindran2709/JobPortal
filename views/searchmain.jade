@@ -1,0 +1,12 @@
+//Search results section
+.container.maincontent
+  .row
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      h4
+      | Your search yielded 
+      span(ng-bind='resultCount') 
+      | &nbsp;results
+  .row
+    include searchfilter.jade
+    ng-include(src='\'partials/searchresults.html\'', scope='', onload='')
+//Search results section end

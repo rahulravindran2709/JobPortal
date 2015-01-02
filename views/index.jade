@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  include navbar.jade
+  div(ng-show='true', ng-controller='SearchController')
+      include splash.jade
+      div(ng-view)
+  include footer.jade
+  include registermodal.jade
+  div(ng-controller="LoginController")
+    modal(hidden='isModalHidden')
+  include scripts.jade

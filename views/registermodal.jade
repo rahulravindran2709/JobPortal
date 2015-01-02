@@ -1,0 +1,17 @@
+#signUpForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h4.modal-title Enter your email and password
+          .modal-body
+            form.form-inline(role='search')
+              input.form-control(type='text', ng-model='credentials.username', placeholder='Enter username')
+              input.form-control(type='text', ng-model='credentials.password', placeholder='Enter password')
+              button.btn.btn-default(type='submit', ng-submit='') Submit
+        //
+           /.modal-content 
+      //
+         /.modal-dialog 
+    //
+       /.modal 

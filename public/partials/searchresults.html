@@ -1,0 +1,57 @@
+<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 panel panel-default">
+          <div class="row panel-heading">
+            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 ">
+              <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                  Showing Results <span  ng-bind="startRow"></span> - <span ng-bind="endRow"></span> of total <span ng-bind="resultCount"></span>
+                </div>
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <div class="dropdown">
+                    <span id="dropdownMenu1" data-toggle="dropdown">
+                      Sort by
+                      <span class="caret"></span>
+                    </span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Popularity</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Posted date</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Salary</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <div class="row paddingleft10 repeat-item" ng-repeat="result in filteredResults" class="repeat-item">
+            <div ng-class="{'col-xs-11':true, 'col-sm-11':true, 'col-md-11':true, 'col-lg-11':true, 'borderbottom':$index!=results.length-1}">
+              <div class="row ">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                  <a><h4 ng-bind="result.jobTitle"></h4></a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <a><h5 ng-bind="result.location"></h5></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="pull-left col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <a><h5 ng-bind="result.company"></h5></a>
+                </div>
+              </div>     
+            </div>
+
+          </div>
+          <div class="row" ng-show="results.length>resultsInPage">
+            <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li ng-repeat="page in pages"><a href="#"><span ng-bind="$index+1"></a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>

@@ -1,0 +1,86 @@
+<div class="container maincontent">
+	<form role="form">
+		<div class="row voffset50">
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+				<h4>Jobs in</h4>
+			</div>
+			<div class="col-xs-5 col-sm-5  col-md-5  col-lg-5">
+				<input type="text" name="search" id="inputSearch" placeholder="Enter keywords here" class="form-control" value="" required="required" pattern="" title="" />
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				<input type="text" placeholder="Enter job location" name="location" id="inputLocation" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 pull-right">
+				<button type="button" class="btn btn-primary btn-block"><span><span class="text-left glyphicon glyphicon-search"></span></span></button>
+			</div>
+			
+		</div>
+		<div class="row"> 
+			
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+				<a href="#moreOptions" data-toggle="collapse"><p class="text-right">More options<span class="caret"></span></p></a>
+			</div>
+		</div>
+		<div id="moreOptions" class="collapse">
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Job Title</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<input type="text" name="jobTitle" id="inputJobTitle" class="form-control" value="" placeholder="Enter job title" required="required" pattern="" title="">
+				</div>
+				
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Salary range ($)</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 slider slider-horizontal">
+					<input type="text" name="inputSalary" class="span2" value="" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Posted on</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<select name="postedDate" id="inputPostedDate" class="form-control" required="required">
+						<option value="">Select date</option>
+						<option value="Today">Today</option>
+						<option value="This week">This week</option>
+						<option value="This month">This month</option>
+					</select>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Experience range </h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 slider slider-horizontal">
+					<input type="text" name="inputExperience" value="" >
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Educational qualifications</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<select name="qualification" id="inputQualification" class="form-control" required="required">
+						<option value="">Select qualifications</option>
+						<option>High School</option>
+						<option>Bachelors degree</option>
+						<option>Masters degree</option>
+					</select>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>Industry</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<select name="industry" id="inputIndustry" class="form-control" required="required">
+						<option value="">Select industry</option>
+						<option>Automotive</option>
+						<option>Banking</option>
+						<option>Insurance</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

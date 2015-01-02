@@ -1,0 +1,17 @@
+.col-xs-3.col-sm-3.col-md-3.col-lg-3(ng-controller='SearchFilterController')
+  .row.panel.panel-default
+      .panel-heading
+        div
+          | Filter Results
+      .panel-body
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+          .row(ng-repeat='filter in filters')
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12(data-target='#{{filter.filterName}}div', data-toggle='collapse', ng-click='toggleGlyphiconState($index)')
+              span(ng-class='{\'glyphicon\':true,\'glyphicon-plus\':filter.isHidden,\'glyphicon-minus\':!filter.isHidden}')
+              span(ng-bind='filter.filterName')
+            div.col-xs-12.col-sm-12.col-md-12.col-lg-12.collapse(id='{{filter.filterName}}div')
+              ul.list-unstyled.paddingleft20
+                li(ng-repeat='filterValue in filter.filterValues')
+                  input(type='checkbox', ng-model='filterValue.isSelected' ng-change="toggleFilterSelection(filter.filterName,filterValue)")
+                  span(ng-bind='filterValue.filterVal')
+        .row

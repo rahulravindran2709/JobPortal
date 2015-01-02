@@ -1,0 +1,57 @@
+.container.searchformbg
+    form(role='form')
+        .row.voffset50
+          .col-xs-6.col-sm-6.col-md-6.col-lg-6
+            auto-complete(id="keywordSearchBox", suggestion-trigger-limit="2", url="/suggestions/keywords", search-property-name='searchQuery.searchKeyword',placeholder='Enter keywords here',element-name="jobSearch",style-class="form-control")
+          .col-xs-5.col-sm-5.col-md-5.col-lg-5
+            auto-complete(id="LocationSearchBox", suggestion-trigger-limit="2",url="/suggestions/locations", search-property-name='searchQuery.location', placeholder='Enter job location', name='location',element-name="locationName",style-class="form-control")
+          .col-xs-1.col-sm-1.col-md-1.col-lg-1.pull-right
+            button.btn.btn-primary.btn-block(type='button',ng-click="searchJobs(searchQuery)")
+              span
+                span.text-left.glyphicon.glyphicon-search
+        .row
+          .col-xs-3.col-sm-3.col-md-3.col-lg-3.pull-right
+            a(href='#moreOptions', data-toggle='collapse')
+              h6.text-right.white
+                | More options
+                span.caret
+        #moreOptions.collapse
+          .row
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Job Title
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              input#inputJobTitle.form-control(type='text', name='jobTitle', value='', placeholder='Enter job title', required='required', pattern='', title='')
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Salary range ($)
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4.slider.slider-horizontal
+              input.span2(type='text', name='inputSalary', value='')
+          .row
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Posted on
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              select#inputPostedDate.form-control(name='postedDate', required='required')
+                option(value='') Select date
+                option(value='Today') Today
+                option(value='This week') This week
+                option(value='This month') This month
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Experience range 
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4.slider.slider-horizontal
+              input(type='text', name='inputExperience', value='')
+          .row
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Educational qualifications
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              select#inputQualification.form-control(name='qualification', required='required')
+                option(value='') Select qualifications
+                option High School
+                option Bachelors degree
+                option Masters degree
+            .col-xs-2.col-sm-2.col-md-2.col-lg-2
+              h4 Industry
+            .col-xs-3.col-sm-3.col-md-3.col-lg-3
+              select#inputIndustry.form-control(name='industry', required='required')
+                option(value='') Select industry
+                option Automotive
+                option Banking
+                option Insurance

@@ -1,0 +1,32 @@
+#loginForm.modal.fade(tabindex='-1',role='dialog', aria-labelledby='myModalLabel', aria-hidden='true', hidden='isModalHidden')
+    .modal-dialog
+        .modal-content
+          form.form-horizontal(role='search')
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+              h4.modal-title Register
+            .modal-body
+              .form-group.paddingleft10
+                .sr-only
+                  label(for='usernameInput') Username
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12.input-group
+                  span.input-group-addon
+                    i.fa.fa-envelope-o.fa-fw
+                  input#usernameInput.form-control(type='text', ng-model='credentials.username', placeholder='Enter email', required='required')
+              .form-group.paddingleft10
+                .sr-only
+                  label(for='passwordInput') Password
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12.input-group
+                  span.input-group-addon
+                    i.fa.fa-key.fa-fw
+                  input.form-control(type='text', for='passwordInput', ng-model='credentials.password', placeholder='Enter password', required='required')
+            .modal-footer
+              .form-group
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                  button.btn.btn-block.btn-primary(type='submit', ng-click='login(credentials)') Submit
+        //
+           /.modal-content 
+      //
+         /.modal-dialog 
+    //
+       /.modal 

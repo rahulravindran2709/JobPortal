@@ -1,0 +1,20 @@
+.autocompleteResultContainer
+{
+	border : 1px solid #ccc;
+	padding-left : 1px;
+	box-shadow : rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+	width :94%;
+	position : absolute;
+	z-index: 1000;
+	background-color: white;
+}
+.autoCompleteResult
+{
+	padding : 12px;
+}
+.hoveredResult
+{
+	background-color: rgb(247, 245, 238);
+
+
+}

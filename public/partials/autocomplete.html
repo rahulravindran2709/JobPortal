@@ -1,0 +1,6 @@
+<div class="autocompleteinput">
+    <input id="{{id}}" type="text" name="{{elementName}}" ng-model="searchString" placeholder="{{placeholder}}" value="" class="{{styleClass}}" ng-keyup="triggerAutoComplete(searchString)"/>
+    <div class="autocompleteResultContainer" ng-show="suggestions.length>0">
+        <div ng-repeat="result in suggestions" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-class="{'hoveredResult':hover,'autoCompleteResult':true}" ng-click="selectOption(result)"><span highlight>{{result}}</span></div>
+    </div>
+</div>
